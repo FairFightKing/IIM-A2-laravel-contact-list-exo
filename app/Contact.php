@@ -8,4 +8,9 @@ class Contact extends Model
 {
     protected $fillable = ['name', 'tel', 'email'];
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }
